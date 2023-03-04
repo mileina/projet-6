@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <form action="http://www.afpa.fr">
+        <label for="textInput">Saisir un texte:</label>
+        <input type="text" id="textInput" name="textInput">
+        <br>
+        <button type="button" id="submitBtn" >Vérifier</button>
+      </form>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $("#submitBtn").click(function(){
+            var text = $("#textInput").val();
+            if (text.length <= 2) {
+              alert("La chaine doit comporter au moins 2 caractères");
+            } else {
+              alert("Vous avez saisi :" + text);
+              $("form").submit();
+            }
+          });
+        });
+        </script>
+        
+    
+  
+</body>
+</html>

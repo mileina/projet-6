@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#choixBtn").click(function(){
+        var selectedRadio = $("input[name='options']:checked").val();
+        $("#textField").val(selectedRadio);
+      });
+    });
+  </script>
+</head>
+
+
+<body>
+  <form>
+    <input type="radio" name="options" value="Option 1">Option 1<br>
+    <input type="radio" name="options" value="Option 2">Option 2<br>
+    <br>
+    <input type="button" id="choixBtn" value="Choix">
+    <br><br>
+    <input type="text" id="textField">
+  </form> 
+</body>
+</html>

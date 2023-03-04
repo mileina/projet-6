@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#postIt").hide();
+      $("#afficheBtn").click(function(){
+        $("#postIt").show();
+        $("#postIt").text("Vous avez cliqu\u00e9 sur le bouton 'Affiche'!");
+      });
+      $("#cacheBtn").click(function(){
+        $("#postIt").hide();
+      });
+      $("#hoverText").mouseover(function(){
+        $("#postIt").show();
+        $("#postIt").text("C'est gentil de me survoler...");
+      });
+      $("#hoverText").mouseout(function(){
+        $("#postIt").hide();
+      });
+    });
+  </script>
+
+  <style>
+    #postIt {
+      position: absolute;
+      background-color: yellow;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="afficheBtn">Affiche</button>
+  <button id="cacheBtn">Cache</button>
+  <br><br>
+  <div id="postIt"></div>
+  <br><br><br>
+  <p id="hoverText">Merci de bien vouloir me survoler</p>
+</body>
+</html>
